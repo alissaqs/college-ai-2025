@@ -13,13 +13,21 @@
   img         {max-width:100%; height:auto; margin:1rem 0;}
   figure      {margin:0 0 2rem;}
   figcaption  {font-size:.85rem; color:#555;}
-  table       {width:100%; border-collapse:collapse; margin:1rem 0;}
-  th,td       {border:1px solid #ddd; padding:.5rem; text-align:left; font-size:.9rem;}
-  thead th    {background:#f5f7fa;}
-  @media (prefers-color-scheme:dark){
-      body{background:#111; color:#e4e4e4;}
-      h1,h2,h3{color:#9ec4ff;}
-      th,td{border-color:#333;}
+  table           {width:100%; border-collapse:collapse; margin:1.5rem 0;}
+  thead th        {background:#0a2342; color:#fff; font-weight:600; padding:.6rem;}
+  tbody td        {padding:.55rem; border:1px solid #d7dce1; font-size:.92rem;}
+  tbody tr:nth-child(even){background:#f6f8fc;}
+    tbody tr:hover  {background:#eaf1ff;}
+ @media (prefers-color-scheme:dark){
+  /* table header stays navy with white text */
+  thead th      {background:#0a2342; color:#ffffff;}
+
+  /* body rows: two subtle navy tints instead of white/black */
+  tbody tr:nth-child(odd)  td {background:#182942;}   /* darker */
+  tbody tr:nth-child(even) td {background:#1f3558;}   /* lighter */
+  tbody td                 {color:#dfe6ff;}          /* soft white text */
+}
+
   }
 </style>
 </head><body>
@@ -27,59 +35,300 @@
 <h1>How U.S. College Students Use AI in 2025<br><small>A Quantitative Snapshot</small></h1>
 
 <h2>1. Executive Summary</h2>
-<p>College classrooms have crossed an AI tipping point … <!-- unchanged text here --> </p>
+<p>College classrooms have crossed an AI tipping point. Recent national polling shows that 58% of adults under 30 have tried ChatGPT, up from 33% in 2023 (Sidoti & McClain, 2025). Within higher-ed itself, 59% of U.S. undergraduates now use generative-AI tools at least monthly, and half of that group keeps using them even when campus rules forbid it (Muscanell & Gay, 2025; Burns & Muscanell, 2024). Global data are just as striking: a 109-country mega-survey found 92% usage among university students (Ravšelj et al., 2025).
+<p>Behind those headline numbers sit clear patterns. Students lean on AI Assistants for brainstorming, summarizing, outlining, and coding help; they worry about accuracy, privacy, and plagiarism detection; and they want explicit guidance, not blanket bans. This paper distills the latest peer-reviewed studies, national reports, and a 2025 Microsoft Education survey to give leaders, faculty, and ed-tech builders an actionable snapshot of College AI.</p>
 
 <h2>2. Methodology &amp; Data Sources</h2>
 <table>
 <thead><tr><th>Source</th><th>Type</th><th>Sample</th><th>Key datapoint</th></tr></thead>
-<tbody>
-<tr><td>Sidoti &amp; McClain (2025)</td><td>Pew national poll</td><td>9,944 U.S. adults</td><td>58 % of 18-29 yos used ChatGPT</td></tr>
-<!-- rest of rows ... -->
+
+  <tbody>
+    <tr>
+      <td>Sidoti &amp; McClain (2025)</td>
+      <td>Pew national poll</td>
+      <td>9 ,944 U.S. adults</td>
+      <td>58 % of 18-29-year-olds have used ChatGPT</td>
+    </tr>
+
+    <tr>
+      <td>Microsoft (2025)</td>
+      <td>Multi-country survey</td>
+      <td>1 ,851 leaders, faculty &amp; students</td>
+      <td>86 % of institutions already deploy generative AI</td>
+    </tr>
+
+    <tr>
+      <td>Muscanell &amp; Gay (2025)</td>
+      <td>EDUCAUSE student survey</td>
+      <td>6 ,468 U.S. students</td>
+      <td>51 % have explicit AI guidance; 43 % avoid AI in courses</td>
+    </tr>
+
+    <tr>
+      <td>Burns &amp; Muscanell (2024)</td>
+      <td>EDUCAUSE QuickPoll</td>
+      <td>278 HE staff</td>
+      <td>55 % say their campus supplies <em>no</em> licensed AI tools</td>
+    </tr>
+
+    <tr>
+      <td>Baek et al. (2024)</td>
+      <td>U.S. survey, <em>Comp.&amp;Ed.:AI</em></td>
+      <td>1 ,001 students</td>
+      <td>Institutional policy predicts higher ChatGPT use</td>
+    </tr>
+
+    <tr>
+      <td>Acosta-Enríquez et al. (2024)</td>
+      <td>LATAM survey, <em>BMC Psychology</em></td>
+      <td>499 students</td>
+      <td>Responsible-use intent strongest attitude driver</td>
+    </tr>
+
+    <tr>
+      <td>Ravšelj et al. (2025)</td>
+      <td>109-country survey, <em>PLOS ONE</em></td>
+      <td>23 ,218 students</td>
+      <td>42 % daily/weekly use; STEM leads adoption</td>
+    </tr>
+
+    <tr>
+      <td>Freeman (2025)</td>
+      <td>HEPI UK survey</td>
+      <td>1 ,041 students</td>
+      <td>18 % paste AI text verbatim in assignments</td>
+    </tr>
+
+    <tr>
+      <td>Yu et al. (2024)</td>
+      <td>Korea SEM study, <em>Front. Educ.</em></td>
+      <td>328 students</td>
+      <td>Perceived usefulness → satisfaction → continued use</td>
+    </tr>
 </tbody></table>
 
 <h2>3. Adoption Snapshot (2023→2025)</h2>
-<p>Generative AI did not creep into campus life; it surged …</p>
+<p>Generative AI did not creep into campus life; it surged. In early 2023, fewer than one-quarter of U.S. undergraduates said they had ever tried an AI Assistant. By spring 2024, that figure had climbed to 43%, and by March 2025, fully 59% were monthly users (Tyton data summarized in Muscanell & Gay, 2025). Weekly and daily use have grown even faster: a global mega-survey of 23,218 students in 109 countries records a 42% “daily-or-weekly” cohort, effectively doubling in just twelve months (Ravšelj et al., 2025).</p>
 <figure>
   <img src="fig1_adoption_curve.png" alt="Line chart: AI adoption rose from 24% in 2023 to 59% in 2025">
-  <figcaption><strong>Figure 1.</strong> Share of U.S. under-graduates using generative-AI tools at least monthly (Tyton + Pew composite).</figcaption>
+  <figcaption><strong>Figure 1.</strong> Share of U.S. undergraduates using generative-AI tools at least monthly (Tyton + Pew composite).</figcaption>
 </figure>
-<p>Three forces drive the curve …</p>
+<p>Three forces drive the curve. First, mainstream visibility—58% of U.S. adults under 30 have now experimented with ChatGPT, according to Pew’s June 2025 pulse poll, creating a powerful network effect that spills onto campus (Sidoti & McClain, 2025). Second, tool quality keeps improving; GPT-4-class assistants can cite sources, switch reading levels, and export ready-to-paste outlines. Third, institutional stance matters: where a university has an explicit “AI-allowed-with-attribution” policy, frequent use is 2.2 times higher than at campuses that remain silent or prohibitive (Baek et al., 2024).</p>
+<p>Equally striking is the fall in zero-use. In 2023, two-thirds of U.S. students had never touched a Writing AI; by 2025, that share is down to 29%. If current diffusion rates hold, college adoption will soon match smartphone penetration during the mobile boom of the early 2010s.</p>
 
 <h2>4. Tool &amp; Use-Case Patterns</h2>
-<p>Across every dataset the same job list bubbles to the top …</p>
+<p>Across every dataset, the same job list bubbles to the top. The typical College AI workflow begins with brainstorming, with students prompting the assistant for angles, thesis possibilities, or code-architecture ideas (29% weekly). Next comes compression: 27% feed lecture notes or PDFs through a summarizer to create study sheets. Third is structuring: 24% ask the AI to outline a lab report or literature review before they start writing. On STEM-heavy campuses, a fourth pattern appears: debugging and refactoring, with 22% using coders like GitHub Copilot or ChatGPT-Code Interpreter to inspect assignments. Finally, 19% rely on the bot for language refinement or translation, smoothing prose or converting drafts from Spanish to English (Baek et al., 2024; Muscanell & Gay, 2025; Ravšelj et al., 2025).</p>
 <figure>
   <img src="fig2_use_cases_bar.png" alt="Horizontal bar chart of top AI use-cases">
   <figcaption><strong>Figure 2.</strong> Weekly share of students using AI Assistants for specific tasks (Baek 2024; EDUCAUSE 2025; PLOS 2025 composite).</figcaption>
 </figure>
 
 <h2>5. Student Attitudes, Ethics &amp; Confidence</h2>
-<p>Sentiment research paints a pragmatic picture …</p>
+<p>Sentiment research paints a pragmatic, not starry-eyed, picture. Most students describe their new AI Assistant as helpful but fallible; a tool they both celebrate and second-guess. In Pew focus groups, undergraduates praised the time savings yet worried about hallucinations and copyright landmines (Sidoti & McClain, 2025). EDUCAUSE’s 2025 pulse shows 52% fear false plagiarism flags more than formal misconduct charges; many paste outputs into multiple detectors before submitting work (Freeman, 2025).</p>
+<p>Moral stance tracks the clarity of rules. Where lecturers lay out a disclosure template (“cite prompts; footnote raw output”), responsible behavior spikes; where silence reigns, self-reported covert use climbs 18 points (Baek et al., 2024). Latin-American data echo the pattern: responsible-use intention is driven chiefly by students’ habit of verifying information before adoption (Acosta-Enríquez et al., 2024).</p>
+<p>Confidence, meanwhile, is rising. Yu et al. (2024) found perceived usefulness and ease of use feed a satisfaction loop (β = 0.71) that in turn predicts continued use. Students who see AI as a legitimate extension of their writing toolbox, rather than a forbidden shortcut, report higher academic self-efficacy and lower anxiety about complex assignments.</p>
 
 <h2>6. Segmentation Insights</h2>
-<p>Adoption is not monolithic …</p>
+<p>Adoption is not monolithic; it follows the contours of discipline, privilege, and policy. STEM majors run ahead, using Writing AI heavily for coding help, 13 percentage points above the cross-field mean (Ravšelj et al., 2025). Arts & Humanities lean toward translation, creative scaffolding, and idea storms, yet record the highest skepticism about factual accuracy, consistent with their emphasis on voice and original argument (Baek et al., 2024).</p>
+<p>Economic context matters. Global polling shows students in low- and lower-middle-income countries catch up fast once free mobile versions appear, but still report a 12-point awareness gap versus peers in high-income settings (Microsoft, 2025). First-generation students mirror that gap inside the U.S.; when campuses embed AI-literacy workshops, the disparity nearly vanishes.</p>
+<p>Policy segmentation is stark. Campuses with a published generative-AI framework report 85% tech-satisfaction versus 34% at “behind-the-times” institutions, and frequent users are twice as likely to cite AI assistance transparently (Muscanell & Gay, 2025). In short: norms drive behavior as powerfully as algorithms.</p>
 <figure>
   <img src="fig3_policy_vs_no_policy_blue_yellow.png" alt="Clustered columns comparing policy vs no-policy campuses">
   <figcaption><strong>Figure 3.</strong> How clear AI policies shape campus behaviour and sentiment (Baek 2024; EDUCAUSE 2025).</figcaption>
 </figure>
 
 <h2>7. Impact on Learning Outcomes</h2>
-<p>Does Writing AI actually lift learning? Evidence is early but promising …</p>
-
+<p>Does Writing AI actually lift learning? Evidence is early but encouraging. A semester-long controlled study at an Australian public university found students who used an AI Assistant for formative feedback scored +9.8% on final exams compared with peers who relied solely on peer review and tutor hours (Microsoft, 2025).</p>
+<p>The mechanism appears to be two-fold. First, instant formative critique compresses feedback loops; students iterate faster, fixing structural or logical gaps before submission. Second, the AI Assistant equalizes access: students who cannot attend office hours still receive targeted guidance. Yu et al. (2024) observed that satisfaction with AI correlates with deeper engagement and a higher likelihood of re-drafting assignments, classic predictors of learning gain.</p>
+<p>Caveats remain. Microsoft’s meta-analysis reports that while AI users improve assignment grades, gains on proctored, closed-book tests are modest, suggesting that critical-thinking transfer is not automatic. Researchers also warn of passivity: when the assistant supplies fully-formed prose, students may skip the synthesis struggle that cements knowledge. Thus, the goal is to harness AI’s scaffolding strengths without outsourcing cognition.</p>
+  
 <h2>8. Policy &amp; Guidance Landscape</h2>
-<p>The governance picture is patchy …</p>
+<p>The governance picture is patchy. Microsoft’s 2025 study found 86% of institutions “deploy generative AI somewhere,” yet only 24% have a campus-wide policy. Faculty support lags: fewer than half have received any training, and only one-third feel “very confident” designing AI-aware assessments (Microsoft, 2025).</p>
+<p>
+  Student demand for clarity is loud. <strong>66 %</strong> want institution-level rules;
+  <strong>45 %</strong> say uncertainty drives covert use&nbsp;(Sidoti &amp; McClain, 2025).
+</p>
 
+<p>Best-practice exemplars share three traits:</p>
+
+<ol>
+  <li><strong>Transparency clause&nbsp;–</strong>
+      students must label AI-derived text and list prompt files.</li>
+
+  <li><strong>Process-over-product grading&nbsp;–</strong>
+      rubrics reward reflection journals, prompt logs, and oral defenses.</li>
+
+  <li><strong>Ethics modules&nbsp;–</strong>
+      short, credit-bearing courses on verification, bias, and privacy.</li>
+</ol>
+<p>When such frameworks launch, both satisfaction and integrity indicators climb, showing that good policy is a pedagogical lever, not red tape (Baek et al., 2024).</p>
+  
 <h2>9. Opportunity Map &amp; Recommendations</h2>
-<p>For presidents &amp; provosts …</p>
+<h2>9. Opportunity Map &amp; Recommendations</h2>
+
+<ul>
+  <li>
+    <strong>For presidents &amp; provosts&nbsp;—</strong>
+    Name an AI strategy lead and give them cross-unit authority.
+    Map generative-AI pilots to measurable student-success KPIs
+    (retention, time-to-degree, cost per credit).
+    Publicly align your rules with emerging U.S. EDUCAUSE / UNESCO guidance
+    to reassure parents and accreditors.
+  </li>
+
+  <li>
+    <strong>For faculty&nbsp;—</strong>
+    Swap “AI-proof” tasks for “AI-plus” design.
+    Example: feed ChatGPT a historical prompt, have students identify three hallucinations,
+    correct them with primary sources, then publish a class-curated fact-check.
+    This converts detection anxiety into critical-reading practice.
+  </li>
+
+  <li>
+    <strong>For instructional designers&nbsp;—</strong>
+    Embed prompt templates inside the LMS; integrate single-sign-on to
+    institutionally-licensed AI Assistants so data stay FERPA-safe.
+    Pair each template with a 90-second screencast on verification.
+  </li>
+
+  <li>
+    <strong>For students&nbsp;—</strong>
+    Adopt the <em>Verify → Remix → Cite</em> habit:
+    fact-check outputs, rewrite in your own analytical voice,
+    reference the AI just like a database.
+  </li>
+
+  <li>
+    <strong>For vendors&nbsp;—</strong>
+    Build education-specific guardrails: automatic inline citations,
+    reading-level toggles, ADA-compliant audio narration,
+    and dashboards that surface <em>process</em>, not private content.
+    Institutions will pay a premium for privacy-aligned “Paper AI” copilots
+    that integrate with writing centres.
+  </li>
+</ul>
+
+<p>
+  Collectively, these moves reframe generative AI from a compliance headache to an
+  equity-and-quality accelerator.
+</p>
+
 
 <h2>10. Future Outlook (12-24 months)</h2>
-<p>Expect another steep climb …</p>
+<h2>10. Future Outlook (12–24 months)</h2>
 
-<hr>
-<figure>
-  <img src="imgs/infographic_ai_snapshot.png" alt="Infographic: AI @ College 2025">
-  <figcaption><strong>Infographic.</strong> AI at College 2025 – adoption, use-cases, policy effect, future glance.</figcaption>
-</figure>
+<p>
+  Expect another steep climb. Current compound-annual-growth suggests weekly use
+  will top <strong>50 %</strong> of all under-graduates by mid-2026.
+  GPT-5-era models will add multimodal input, letting biology students
+  upload microscope images for instant annotation while journalism majors
+  parse council-meeting audio into quotes.
+</p>
 
-<p style="font-size:.8rem;">© 2025 Your-Org-Name. Creative Commons BY-NC-ND 4.0. | Sources: Pew 2025; EDUCAUSE 2025; Ravšelj 2025, et al.</p>
+<p>
+  Assessment will keep evolving: orals, live studios, and <em>process portfolios</em>
+  will become mainstream as faculty pivot from product policing to reasoning
+  observation. <strong>AI literacy</strong> will migrate from elective to core graduate
+  attribute, joining writing and numeracy on program-learning-outcome sheets.
+</p>
+
+<p>
+  Vendors will launch discipline-specific companions—think
+  “Organic-Chem Co-Pilot” or “Constitutional-Law Briefing Bot.”
+  Meanwhile, regulators are likely to move from broad principles
+  to sector-specific codes; U.S. regional accreditors have hinted
+  that AI-ethics coverage will become a quality-assurance checkpoint.
+</p>
+
+<p>
+  Longer-term, early-career hires may manage fleets of specialized AI agents,
+  much like juniors once managed spreadsheets. Students who master prompt-engineering,
+  verification, and citation today will carry a durable edge into that world.
+  <strong>The Writing-AI era is here;</strong> the next two years will decide whether
+  higher-ed rides the wave or paddles behind it.
+</p>
+
+<h2>References</h2>
+
+<ol>
+  <li>
+    Acosta-Enríquez, B. G., Arbulú Ballesteros, M. A., Huamaní Jordan, O.,
+    López Roca, C., &amp; Saavedra Tirado, K. (2024).
+    <em>Analysis of college students’ attitudes toward the use of ChatGPT in their academic activities.</em>
+    <span>BMC Psychology, 12</span>, 255.
+    <a href="https://doi.org/10.1186/s40359-024-01764-z" target="_blank">https://doi.org/10.1186/s40359-024-01764-z</a>
+  </li>
+
+  <li>
+    Baek, C., Tate, T., &amp; Warschauer, M. (2024).
+    “ChatGPT seems too good to be true”: College students’ use and perceptions of generative AI.
+    <em>Computers &amp; Education: Artificial Intelligence, 7</em>, 100294.
+    <a href="https://doi.org/10.1016/j.caeai.2024.100294" target="_blank">https://doi.org/10.1016/j.caeai.2024.100294</a>
+  </li>
+
+  <li>
+    Burns, S., &amp; Muscanell, N. (2024).
+    <em>EDUCAUSE QuickPoll Results: A Growing Need for Generative-AI Strategy.</em> EDUCAUSE.
+    <a href="https://er.educause.edu/articles/2024/4/educause-quickpoll-results-a-growing-need-for-generative-ai-strategy" target="_blank">
+      https://er.educause.edu/articles/2024/4/educause-quickpoll-results-a-growing-need-for-generative-ai-strategy
+    </a>
+  </li>
+
+  <li>
+    Freeman, J. (2025).
+    <em>Student Generative AI Survey 2025</em> (HEPI Policy Note 61). Higher Education Policy Institute.
+    <a href="https://www.hepi.ac.uk/2025/02/26/student-generative-ai-survey-2025/" target="_blank">
+      https://www.hepi.ac.uk/2025/02/26/student-generative-ai-survey-2025/
+    </a>
+  </li>
+
+  <li>
+    Microsoft. (2025).
+    <em>AI in Education: A Microsoft Special Report.</em> Microsoft Education.
+    <a href="https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/bade/documents/products-and-services/en-us/education/2025-Microsoft-AI-in-Education-Report.pdf" target="_blank">
+      PDF
+    </a>
+  </li>
+
+  <li>
+    McMurtrie, B. (2025, June 20).
+    AI to the rescue. <em>The Chronicle of Higher Education.</em>
+    <a href="https://www.chronicle.com/special-projects/the-different-voices-of-student-success/ai-to-the-rescue" target="_blank">
+      https://www.chronicle.com/special-projects/the-different-voices-of-student-success/ai-to-the-rescue
+    </a>
+  </li>
+
+  <li>
+    Muscanell, N., &amp; Gay, K. (2025).
+    <em>2025 Students and Technology Report: Shaping the Future of Higher Education through Technology, Flexibility, and Well-Being.</em> EDUCAUSE.
+    <a href="https://www.educause.edu/content/2025/students-and-technology-report" target="_blank">
+      https://www.educause.edu/content/2025/students-and-technology-report
+    </a>
+  </li>
+
+  <li>
+    Ravšelj, D., Keržič, D., Tomaževič, N., Umek, L., &amp; Brezovar, N. (2025).
+    Higher-education students’ perceptions of ChatGPT: A global study of early reactions.
+    <em>PLOS ONE, 19</em>(4), e0315011.
+    <a href="https://doi.org/10.1371/journal.pone.0315011" target="_blank">https://doi.org/10.1371/journal.pone.0315011</a>
+  </li>
+
+  <li>
+    Sidoti, O., &amp; McClain, C. (2025, June 25).
+    34 % of U.S. adults have used ChatGPT, about double the share in 2023.
+    <em>Pew Research Center.</em>
+    <a href="https://www.pewresearch.org/short-reads/2025/06/25/34-of-us-adults-have-used-chatgpt-about-double-the-share-in-2023/" target="_blank">
+      https://www.pewresearch.org/short-reads/2025/06/25/34-of-us-adults-have-used-chatgpt-about-double-the-share-in-2023/
+    </a>
+  </li>
+
+  <li>
+    Yu, C., Yan, J., &amp; Cai, N. (2024).
+    ChatGPT in higher education: Factors influencing user satisfaction and continued-use intention.
+    <em>Frontiers in Education, 9</em>, 1354929.
+    <a href="https://doi.org/10.3389/feduc.2024.1354929" target="_blank">https://doi.org/10.3389/feduc.2024.1354929</a>
+  </li>
+</ol>
+
 
 </body></html>
