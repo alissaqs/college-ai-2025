@@ -4,7 +4,7 @@
 This repo hosts the web version of my 1,900-word white paper, three custom charts, and one infographic summarising the latest adoption data on generative-AI tools in U.S. higher education.
 
 🔗 **Live page:**  
-https://<your-user>.github.io/college-ai-2025/
+https://alissaqs.github.io/college-ai-2025/
 
 ---
 
